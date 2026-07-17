@@ -12,6 +12,7 @@ const RecommendationCard = () => {
       setLoading(true);
 
       const token = localStorage.getItem("token");
+      console.log(1234)
 
       try {
         const response = await fetch(
@@ -25,6 +26,7 @@ const RecommendationCard = () => {
           },
         );
         const data = await response.json();
+        console.log(data)
         setApiMeal(data.data);
       } catch (error) {
         console.log(error);

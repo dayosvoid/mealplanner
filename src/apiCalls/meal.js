@@ -21,8 +21,8 @@ export const handleUpdateMeal = async (mealId, payload) => {
   return response.data;
 };
 
-export const HandleAllMeal = async () => {
-    const response = await axios.get(`meals/allMeals`);
+export const HandleAllMeal = async (weekday) => {
+   const response = await axios.get(`meals/allMeals?weekday=${weekday}`);
     return response.data 
 };
 

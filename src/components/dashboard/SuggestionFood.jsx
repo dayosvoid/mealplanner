@@ -11,7 +11,7 @@ const SuggestionFood = () => {
     const fetchSuggestions = async () => {
       try {
         setIsLoading(true);
-        const response = await HandleAllMeal();
+        const response = await HandleAllMeal(weekday)
         
         if (response && response.success) {
           setMealsData(response.data ? response.data : [])};
